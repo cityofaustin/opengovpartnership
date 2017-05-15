@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body class="usds-site {{ page.url | replace:'index','home' | replace: '404','notfound' | replace:'.html','' | slugify }}-page">
+    {% include header.html %}
+    <main>
+      {{ content }}
+    </main>
+    {% include footer.html %}
+    {% include site_alert.html %}
+  </body>
+  {% include analytics.html %}
+</html>

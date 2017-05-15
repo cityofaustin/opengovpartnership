@@ -1,0 +1,93 @@
+---
+layout: default
+---
+
+<section class="background-statement usa-grid">
+  <div class="usa-width-two-thirds">
+    {% include intro.html %}
+      <ul class="featured">
+        <li>
+          <a href = "https://opengovpartnership.bloomfire.com/series/35075-commitment-1-homelessness-shared-reasoning" target="_blank"><h3>Homelessness and Shared Reasoning</h3></a>
+The city's Open Government Partnership Action Plan includes co-creating a systems map of homelessness for shared reasoning around this complex issue to better inform funding and policy-making.            </li>
+        <li>
+          <a href = "https://opengovpartnership.bloomfire.com/series/35582-commitment-2-equity-tool" target="_blank"><h3>Equity Tool</h3></a>
+The city's Open Government Partnership Action Plan includes establishing an equity assessment tool to better support decision-making and track progress towards critical goals.            </li>
+        <li>
+          <a href = "https://opengovpartnership.bloomfire.com/series/35086-commitment-3-open-governance-operating-board" target="_blank"><h3>Open Government Operating Board</h3></a>
+          The city's Open Government Partnership Action Plan includes adapting the City Manager’s executive Open Government Operating Board to oversee broader open government efforts.
+
+          To sign up for email updates on this commitment, go <a href = "http://eepurl.com/cHkOLL" target="_blank">here</a>         </li>
+        <li>
+          <a href = "https://opengovpartnership.bloomfire.com/series/35087-commitment-4-city-public-meetings" target="_blank"><h3>City Public Meetings</h3></a>
+The city's Open Government Partnership Action Plan includes conducting an open analysis of city public meetings for increased understanding, accessibility, efficiency, and effectiveness.            </li>
+        <li>
+          <a href = "https://opengovpartnership.bloomfire.com/series/35084-commitment-5-project-tracking-tool" target="_blank"><h3>Project Tracker Tool</h3></a>
+The city's Open Government Partnership Action Plan includes creating an online resource to track the progress of open government projects.            </li>
+      </ul>
+
+  </div>
+
+  <div class="sidebar usa-width-one-third">
+    <div class = "side-widget learn-more">
+      <h4>Learn More About</h4>
+      {% for article in site.data.learnmore %}
+
+      {% cycle 'press grid' : '<div class="usa-grid">', nil, nil %}
+
+        <div class="entry">
+          <a href="{{ article.article_link }}" target="_blank"><h5>{{ article.title }}</h5></a>
+        </div>
+
+      {% if forloop.last %}
+        </div>
+      {% else %}
+        {% cycle 'press grid' : nil, nil, '</div>' %}
+      {% endif %}
+
+      {% endfor %}
+    </div>
+
+    <!-- <div class = "side-widget latest-activity">
+      <h4>Latest Activity</h4>
+      {% for article in site.data.activity %}
+
+      {% cycle 'press grid' : '<div class="usa-grid">', nil, nil %}
+
+        <div class="entry">
+          <a href="{{ article.article_link }}"><h5>{{ article.title }}</h5></a>
+          <p>{{ article.summary | truncatewords: 20 }}</>
+          By <span class="author">{{ article.author }},</span> Updated on <span class="date">{{ article.date }}</span>
+        </div>
+
+      {% if forloop.last %}
+        </div>
+      {% else %}
+        {% cycle 'press grid' : nil, nil, '</div>' %}
+      {% endif %}
+
+      {% endfor %}
+    </div> -->
+
+    <div class = "side-widget upcoming-events">
+      <h4>Events</h4>
+      {% for article in site.data.events %}
+
+      {% cycle 'press grid' : '<div class="usa-grid">', nil, nil %}
+
+        <div class="entry">
+          <a href="{{ article.article_link }}" target="_blank"><h5>{{ article.title }}</h5></a>
+          <span class="date">{{ article.date }}</span>
+          <p>{{ article.summary | truncatewords: 20 }}</>
+        </div>
+
+      {% if forloop.last %}
+        </div>
+      {% else %}
+        {% cycle 'press grid' : nil, nil, '</div>' %}
+      {% endif %}
+
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

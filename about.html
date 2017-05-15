@@ -1,0 +1,61 @@
+---
+layout: default
+title: About
+permalink: /about/
+---
+
+<section class="background-statement usa-grid">
+  <div class="usa-width-two-thirds">
+    <h1>About the Open Government Partnership</h1
+    <p>An international coalition of government and civil society, the Open Government Partnership (OGP) began in 2011 with 8 countries and grew to 70 countries by 2016.</p>
+    <p>Being a member means co-creating concrete commitments with civil society. OGP helps with support and accountability.</p>
+    <h3>OGP Values</h3>
+    <p><a href = "https://opengovpartnership.bloomfire.com/series/35733/posts/1361743" target="_blank">Visit our Bloomfire site </a> to read more in-depth about OGP's values.</p>
+
+    <img src = "../img/home/preso.png">
+    <ul class = "featured">
+      <li><h4>Tech & Innovation</h4>
+        <p>Embrace the role of new technologies,
+          open access to technologies, &
+          increase citizens’ capacity  to use technology</p></li>
+        <li><h4>Transparency</h4>
+          <p>Publish information on government activities and decisions in a comprehensive, timely, and freely and open manner</p></li>
+        <li><h4>Accountability</h4>
+            <p>Justify government actions, act upon criticisms or requirements made, and accept responsibility for failure to perform</p></li>
+        <li><h4>Civic Participation</h4>
+                <p>Mobilize citizens in public debate, provide input, and make contributions  responsive, innovative and effective governance</p></li>
+    </ul>
+    <h3>OGP in Austin</h3>
+    <p> In 2015, OGP opened membership to “subnational” or governments below the national level. The pilot will help OGP learn about supporting local governments worldwide. </p>
+    <ul class = "featured">
+      <div class = "quote">“Open government initiatives at the subnational level potentially generate more impact, have greater visibility and are easier to measure.”</div>
+    </ul>
+    <p> Austin applied through a <a href = "https://opengovpartnership.bloomfire.com/posts/1176531-city-of-austin-s-application-to-the-open-government-partnership-subnational-pil" target="_blank">rigorous application process</a> requiring:
+evidence of City Council support,
+letters of recommendation,
+community endorsements, commitments to collaborate from civil society organizations
+</p>
+    <p>Austin is the only U.S. subnational government to join the pilot.</p>
+  </div>
+
+  <div class="sidebar usa-width-one-third">
+      <div class = "side-widget learn-more">
+        <h4>Guiding Documents</h4>
+        {% for article in site.data.documents %}
+
+        {% cycle 'press grid' : '<div class="usa-grid">', nil, nil %}
+
+          <div class="entry">
+            <a href="{{ article.article_link }}" target="_blank"><h5>{{ article.title }}</h5></a>
+          </div>
+
+        {% if forloop.last %}
+          </div>
+        {% else %}
+          {% cycle 'press grid' : nil, nil, '</div>' %}
+        {% endif %}
+
+        {% endfor %}
+      </div>
+  </div>
+</section>
