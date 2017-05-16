@@ -1,4 +1,5 @@
 ---
+title: Open Government Partnership | Austin
 layout: default
 ---
 
@@ -75,7 +76,13 @@ The city's Open Government Partnership Action Plan includes creating an online r
       {% cycle 'press grid' : '<div class="usa-grid">', nil, nil %}
 
         <div class="entry">
+
+          {% if article.article_link %}
           <a href="{{ article.article_link }}" target="_blank"><h5>{{ article.title }}</h5></a>
+          {% else %}<h5>{{ article.title }}</h5>
+
+          {% endif %}
+
           <span class="date">{{ article.date }}</span>
           <p>{{ article.summary | truncatewords: 20 }}</>
         </div>
