@@ -38,6 +38,9 @@
       </button>
       <div class="mobile-nav collapsed">
         <ul class="usa-unstyled-list">
+          <li class="nav-item {% if page.url == '/team.html' %}active{% endif %}">
+            <a href="{{ site.baseurl }}/"><span>Home</span></a>
+          </li>
           <li class="nav-item">
             <a href="{{ site.baseurl }}/about">About</a>
 <!--             <ul>
@@ -47,7 +50,7 @@
             </ul> -->
           </li>
           <li class="nav-item">
-            <a href="{{ site.baseurl }}/project-tracker">Project Tracker</a>
+            <a href="https://opengovpartnership.bloomfire.com/series/35084-commitment-5-project-tracking-tool">Project Tracker</a>
           </li>
       </div>
     </div>
