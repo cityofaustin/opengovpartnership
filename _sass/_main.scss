@@ -783,7 +783,7 @@ a:focus {
       background-color: #CAB41F;
     }
   }
-
+  
   footer {
     text-align: left;
     background-color: #eee;
@@ -847,7 +847,16 @@ a:focus {
       }
     }
   } // </footer>
-
+  
+  .stripecontainer {
+    background-color: #323A45;
+    .stripe {
+    height: 50px;
+    position: absolute;
+    left: 0;
+    }
+  }
+  
 } // </.usds-site>
 
 
